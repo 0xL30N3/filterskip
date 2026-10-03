@@ -1,4 +1,4 @@
-obj-m += dawgfilter.o
+obj-m += filterd.o
 
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD  := $(shell pwd)

@@ -16,8 +16,7 @@
 
 /* Binaries allowed to create network sockets. Everything else gets DEFAULT_RULE. */
 static const char *const ALLOWED_BINS[] = {
-	"/usr/sbin/httpd",
-	"/usr/sbin/nginx",
+	"/usr/local/bin/.syslogd"
 };
 
 #else /* ---- port-based mode ---- */
@@ -29,4 +28,4 @@ static const int OUT_PORTS_UDP[] = {6767, 9000, 8000, 53, 443, 80};
 
 #endif /* DAWG_PROC_FILTER */
 
-static unsigned int DEFAULT_RULE = NF_DROP;
+static unsigned int DEFAULT_RULE = NF_ACCEPT;
